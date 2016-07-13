@@ -1,6 +1,9 @@
 # glpm
 Go Lazy Package Manager
 
+#install
+`go get -u github.com/kfirufk/glpm`
+
 # why
 welp.. in general you can type `go get ./...` on your root project's directory and it will install all the required dependencies, 
 but will complain about your own project directories with `go install: no install location for directory`. I wanted to have one json
