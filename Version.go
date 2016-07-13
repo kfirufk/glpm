@@ -1,4 +1,4 @@
-package version
+package glpm
 
 import (
 	"fmt"

@@ -1,4 +1,4 @@
-package dependencies
+package glpm
 
 
 import (
@@ -8,7 +8,6 @@ import (
 	"strings"
 	"io/ioutil"
 	"regexp"
-	"../../glpmjson"
 	"encoding/json"
 	"sort"
 )
@@ -74,7 +73,7 @@ func AutoAddDependencies(glpmJsonFile string,path string) {
 	if (err != nil) {
 		log.Fatalf("could not read json file %v: %v",glpmJsonFile,err)
 	}
-	glpmJsonObj := glpmjson.GlpmJson{}
+	glpmJsonObj := GlpmJson{}
 	err = json.Unmarshal(jsonBytes,&glpmJsonObj)
 	if (err != nil) {
 		log.Fatalf("could not parse json file: %v: %v",glpmJsonFile,err)

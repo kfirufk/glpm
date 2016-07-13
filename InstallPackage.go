@@ -1,10 +1,9 @@
-package install
+package glpm
 
 import (
 	"io/ioutil"
 	"log"
 	"encoding/json"
-	"../../glpmjson"
 	"os/exec"
 )
 
@@ -13,7 +12,7 @@ func InstallPackage(glpmJsonFile string,goPackage string) {
 	if (err != nil) {
 		log.Fatalf("could not read json file %v: %v",glpmJsonFile,err)
 	}
-	var glpmJsonObj = glpmjson.GlpmJson{}
+	var glpmJsonObj = GlpmJson{}
 	err = json.Unmarshal(jsonBytes,&glpmJsonObj)
 	if (err != nil) {
 		log.Fatalf("could not parse json file %v: %v",glpmJsonFile,err)

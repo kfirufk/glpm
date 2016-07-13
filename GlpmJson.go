@@ -1,4 +1,4 @@
-package glpmjson
+package glpm
 
 type GlpmJson struct {
 	Packages []string `json:"packages"`

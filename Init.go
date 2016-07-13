@@ -1,16 +1,15 @@
-package initglpm
+package glpm
 
 import (
 	"encoding/json"
 	"io/ioutil"
-	"../../glpmjson"
 	"log"
 	"os"
 )
 
 func Init(glpmJsonFile string) {
 	if _, err := os.Stat(glpmJsonFile); os.IsNotExist(err) {
-		jsonData, err := json.MarshalIndent(glpmjson.GlpmJson{},"","    ")
+		jsonData, err := json.MarshalIndent(GlpmJson{},"","    ")
 		if err != nil {
 			log.Panicf("could not parse empty glpm json: %v", err)
 		} else {
