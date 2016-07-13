@@ -1,4 +1,4 @@
-package glpm
+package main
 
 import (
 	"os"
@@ -8,7 +8,7 @@ import (
 
 const glpmJsonFile string = "glpm.json"
 
-func init() {
+func main() {
 	currentDir, err := os.Getwd()
 	if (err != nil) {
 		log.Panicf("couldn't get current directory's path: %v",err)
