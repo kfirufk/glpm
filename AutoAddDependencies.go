@@ -25,7 +25,6 @@ func addValidImport(importName string) {
 	if (!strings.HasPrefix(importName, "../")) {
 		if idx := strings.Index(importName, "/"); idx > -1 {
 			url := importName[:idx]
-			log.Printf("url: %v", url)
 			if validUrl.MatchString(url) {
 				dependencies[importName]++
 			}
